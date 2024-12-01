@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex007</title>
+    <style>
+        body{
+            background-color: rgb(108, 108, 197);
+            color: white;
+            font-family: normal 20pt serif;
+        }
+    </style>
+
+</head>
+<body>
+    <script>
+        var num = window.prompt("Insira um numero para saber sua tabuada: ");
+
+
+        while(isNaN(num)){
+            alert("Insira um número válido!");
+            num = window.prompt("Insira um numero para saber sua tabuada: ");
+        }   
+
+        var tabuada = document.write(`${num}x1= ${parseFloat(num) *1} </br> ${num}x2= ${parseFloat(num) *2} </br> 
+        ${num}x3=${parseFloat(num) *3} </br> ${num}x4=${parseFloat(num) *4} </br> ${num}x5=${parseFloat(num) *5} 
+        </br> ${num}x6=${parseFloat(num) *6} </br> ${num}x7=${parseFloat(num) *7} </br> ${num}x8=${parseFloat(num) *8} 
+        </br> ${num}x9=${parseFloat(num) *9} </br> ${num}x10=${parseFloat(num) *10}`);
+
+        
+        alert(tabuada);
+    </script>
+</body>
+</html>
