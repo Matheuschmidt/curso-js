@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex005</title>
+    <style>
+        body{
+            background-color: blue;
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+    var nome = window.prompt("Qual é o seu nome? ");   
+    
+    while(/\d/.test(nome)){ // verifica se o usuario nao esta inserindo numeros
+        window.alert("Por favor, insira um nome válido. ");
+        nome = window.prompt("Qual é o seu nome? ");
+    }
+
+    document.write(`Seu nome tem ${nome.length}</br>`); //quantos caracteres tem a string
+    document.write(`Seu nome em maiusculo  <strong>${nome.toUpperCase()}</strong></br>`); // tudo em maiusculo
+    document.write(`Seu nome em minusculo <strong>${nome.toLowerCase()}</strong></br>`); // tudo em minusculo
+
+    /*
+        TESTADO EM NODE
+    Formatação de números em JavaScript:
+    ------------------------------------
+    Exemplos de métodos úteis para formatar números.
+
+    1. `toFixed(digits)`:
+       - Formata o número para um número fixo de casas decimais.
+       - Exemplo:
+         - Valor inicial: `1400.2`.
+         - Código: `n1.toFixed(2)`.
+         - Resultado: `'1400.20'` (string).
+
+    2. Substituindo ponto por vírgula:
+       - Útil para formatos numéricos usados em alguns países (como o Brasil).
+       - Exemplo:
+         - Código: `n1.toFixed(2).replace(".", ",")`.
+         - Resultado: `'1400,20'`.
+
+    3. `toLocaleString()`:
+       - Formata o número com base na localização e estilo especificado.
+       - Pode ser usado para exibir números como moeda em diferentes formatos.
+
+       Exemplos de uso:
+       a) Formato brasileiro (R$):
+          - Código: `n1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })`.
+          - Resultado: `'R$ 1.400,20'`.
+
+       b) Formato americano (US$):
+          - Código: `n1.toLocaleString('en', { style: 'currency', currency: 'USD' })`.
+          - Resultado: `'$1,400.20'`.
+
+       c) Formato europeu (€):
+          - Código: `n1.toLocaleString('en', { style: 'currency', currency: 'EUR' })`.
+          - Resultado: `'€1,400.20'`.
+
+    Observação:
+    - `toLocaleString()` é altamente recomendado para formatação de números porque se adapta automaticamente às convenções locais e estilos de moeda.
+*/
+
+    </script>
+</body>
+</html>

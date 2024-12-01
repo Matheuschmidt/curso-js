@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n1 = window.prompt("Digite um Numero: ");
+        var n2 = window.prompt("Digite outro Numero: ");
+
+        var soma = Number(n1) + Number(n2);
+
+      /*    while (isNaN(soma)) {
+           alert("Insira apenas numeros.");
+
+            n1 = window.prompt("Digite um Numero: ");
+            n2 = window.prompt("Digite outro Numero: ");
+            soma = parseFloat(n1) + parseFloat(n2);
+        }  FAZ UMA VERIFICAÇÃO SUPERFICIAL*/
+
+        while (true) {
+        //solicita n1 ate ser valido
+        while(isNaN(Number(n1))) {
+
+            if (isNaN(Number(n1))) {
+                alert("O valor digitado para n1 não é um número válido. Tente novamente.");
+        }
+        n1 = window.prompt("Insira um numero valido para n1: ");
+    }
+
+        while (isNaN(Number(n2))) {
+            n2 = window.prompt("Insira um numero valido para n2: ");
+            if (isNaN(Number(n2))) {
+                alert("O valor digitado para n2 não é um número válido. Tente novamente.");
+            }
+        }
+
+        if(!isNan(Number(n1)) && !isNaN(Number(n2))){
+            break;
+        }
+    
+    }
+        alert(`${n1} + ${n2} = ${soma}`);
+    </script>
+</body>
+</html>

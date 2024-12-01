@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>curso js</title>
+    <style>
+        body{
+            background-color: blue;
+            color: white;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p> teste</p>
+
+
+
+    <script>
+        /*
+    Anotações sobre o código:
+    -------------------------
+    1. Diferenças entre os tipos de while:
+       - while (isNaN(soma)):
+         - Mais simples e direto.
+         - Ideal para situações em que a condição é clara e única.
+       - while (true):
+         - Mais flexível, útil para cenários mais complexos.
+         - Permite múltiplas condições e lógica adicional para saída do loop.
+
+    2. Estrutura do código:
+       - Solicita dois números do usuário.
+       - Valida se os números são válidos (não NaN).
+       - Continua pedindo números até que sejam válidos.
+       - Mostra o resultado formatado com template strings (`${}`).
+
+    3. Observação sobre alert:
+       - O último alert usa template strings, o que é a forma mais adequada e moderna de formatar strings.
+       - Exemplo: `${n1} + ${n2} = ${soma}`.
+    */
+   
+        var n1 = window.prompt('Digite o número 1: ');
+        var n2 = window.prompt('Digite o número 2: ');
+    
+        var soma = parseFloat(n1) + parseFloat(n2);
+    
+        // Enquanto o valor da soma não for válido, continue pedindo entradas
+        while (isNaN(soma)) { 
+            alert("Digite números válidos!");
+            n1 = window.prompt('Digite o número 1: ');
+            n2 = window.prompt('Digite o número 2: ');
+            soma = parseFloat(n1) + parseFloat(n2);
+        }
+    
+        // Mostra o resultado formatado com template strings
+        alert(`${n1} + ${n2} = ${soma}`);
+
+
+
+        
+    </script>
+</body>
+</html>
