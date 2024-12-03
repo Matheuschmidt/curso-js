@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background-color: rgb(99, 99, 179);
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>aqui vai o resultado: </h1>
+
+    <div id="msg">clique em mim</div>
+    <h5>HELLO WORLD</h5>
+    <p>aprendendo a usar o <strong>DOM</strong> em JS</p>
+
+    <p>estou testando o DOM</p>
+    <script>
+        var corpo = window.document.body
+        var p1= window.document.getElementsByTagName('p')[0];
+        var d = window.document.getElementById('msg');
+        window.document.write('esta escrito assim: '+ p1.innerText); 
+        
+        // modifica a cor do background do body
+        corpo.style.backgroundColor = 'black';
+
+        d.style.color = 'blue';
+
+        // modifica a cor do texto
+        p1.style.color = 'red';
+    </script>
+</body>
+</html>
