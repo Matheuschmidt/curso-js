@@ -23,14 +23,15 @@
     <script>
         var corpo = window.document.body
         var p1= window.document.getElementsByTagName('p')[0];
-        var d = window.document.getElementById('msg');
+        //var d = window.document.getElementById('msg');
         window.document.write('esta escrito assim: '+ p1.innerText); 
+        var d = window.document.querySelector('div#msg');
         
         // modifica a cor do background do body
         corpo.style.backgroundColor = 'black';
 
-        d.style.color = 'blue';
-
+        //d.style.color = 'blue';
+        d.style.color = 'green';
         // modifica a cor do texto
         p1.style.color = 'red';
     </script>
