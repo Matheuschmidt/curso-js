@@ -4,16 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
+
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+        input{
+            margin: 10px;
+        }
+        #res {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        #somar, #subtrair, #multiplicar, #dividir {
+            margin-top: 10px;
+        }
+
+        /* CSS para estilizar botões */
+        #somar, #subtrair, #multiplicar, #dividir {
+            font: Arial;
+            font-size: 18pt;
+            font-weight: bold;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            
+            
+        }
+    </style>
 </head>
 <body>
 
     <h1><strong>Calculadora!</strong></h1>
     <input type="number" name="n1" id="n1">
     <input type="number" name="n2" id="n2">
-    <input type="button" value="somar" id="somar">
-    <input type="button" value="subtrair" id="subtrair">
-    <input type="button" value="multiplicar" id="multiplicar">
-    <input type="button" value="dividir" id="dividir">
+    <input type="button" value="Somar" id="somar">
+    <input type="button" value="Subtrair" id="subtrair">
+    <input type="button" value="Multiplicar" id="multiplicar">
+    <input type="button" value="Dividir" id="dividir">
 
     <div id="res">Resultado!</div>
 
