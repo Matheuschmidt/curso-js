@@ -1,4 +1,7 @@
 function parimpar(n){
+    while(isNaN(Number(n))){
+        return "Insira um numero";
+    }
     if (n % 2 == 0){
         return "par";
     }else{
@@ -6,4 +9,4 @@ function parimpar(n){
     }
 }
 
-console.log(parimpar(2));
+console.log(parimpar("qaww"));
